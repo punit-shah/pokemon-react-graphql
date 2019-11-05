@@ -4,7 +4,7 @@ import { gql } from 'apollo-boost';
 import { Link } from '@reach/router';
 import PokemonCard from './PokemonCard';
 
-const POKEMON_LIST_QUERY = gql`
+export const POKEMON_LIST_QUERY = gql`
   {
     pokemons(first: 151) {
       id

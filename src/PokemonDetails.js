@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 
-const POKEMON_DETAILS_QUERY = gql`
+export const POKEMON_DETAILS_QUERY = gql`
   query getPokemon($id: String!) {
     pokemon(id: $id) {
       image
