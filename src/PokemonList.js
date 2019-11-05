@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
-import { Link } from 'react-router-dom';
+import { Link } from '@reach/router';
 import PokemonCard from './PokemonCard';
 
 const POKEMON_LIST_QUERY = gql`

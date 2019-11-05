@@ -1,7 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
-import { useParams } from 'react-router-dom';
 
 const POKEMON_DETAILS_QUERY = gql`
   query getPokemon($id: String!) {
@@ -16,8 +15,7 @@ const POKEMON_DETAILS_QUERY = gql`
   }
 `;
 
-const PokemonDetails = () => {
-  const { id } = useParams();
+const PokemonDetails = ({ id }) => {
   const { loading, error, data } = useQuery(POKEMON_DETAILS_QUERY, {
     variables: { id },
   });
