@@ -8,6 +8,12 @@
   padding-right: 1rem;
 }
 
+.Container-centered {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 @media (min-width: 600px) {
   .Container {
     padding-left: 8.1%;

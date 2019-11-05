@@ -29,11 +29,9 @@ const PokemonList = () => {
   ));
 
   return (
-    <div className="PokemonList">
-      <Container>
-        <ul>{listItems}</ul>
-      </Container>
-    </div>
+    <Container className="PokemonList">
+      <ul>{listItems}</ul>
+    </Container>
   );
 };
 

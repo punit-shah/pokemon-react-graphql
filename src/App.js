@@ -2,6 +2,7 @@ import React from 'react';
 import { Router } from '@reach/router';
 import PokemonList from './pages/PokemonList';
 import PokemonDetails from './pages/PokemonDetails';
+import './App.css';
 
 const App = () => (
   <div className="App">

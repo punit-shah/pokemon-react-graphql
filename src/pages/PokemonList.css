@@ -1,7 +1,3 @@
-.PokemonList {
-  background-color: #f5d2d3;
-}
-
 .PokemonList ul {
   list-style: none;
   display: flex;

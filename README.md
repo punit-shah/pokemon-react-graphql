@@ -14,7 +14,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Todo
 
-- styling (please do not look at the app yet it looks terrible)
 - routing tests
 - header component
 - error/loading tests, components
