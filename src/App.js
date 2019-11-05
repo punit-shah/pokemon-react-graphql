@@ -1,18 +1,15 @@
 import React from 'react';
 import { Router } from '@reach/router';
-import PokemonList from './components/PokemonList';
-import PokemonDetails from './components/PokemonDetails';
-import './App.css';
+import PokemonList from './pages/PokemonList';
+import PokemonDetails from './pages/PokemonDetails';
 
-function App() {
-  return (
-    <div className="App">
-      <Router>
-        <PokemonList path="/" />
-        <PokemonDetails path="/:id" />
-      </Router>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <Router>
+      <PokemonList path="/" />
+      <PokemonDetails path="/:id" />
+    </Router>
+  </div>
+);
 
 export default App;
