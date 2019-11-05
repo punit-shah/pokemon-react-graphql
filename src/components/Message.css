@@ -1,0 +1,8 @@
+.Message {
+  display: inline-block;
+  margin: 0;
+  padding: 1rem;
+  background-color: #fff;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-weight: 700;
+}

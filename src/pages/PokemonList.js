@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import PokemonCard from '../components/PokemonCard';
 import Container from '../components/Container';
+import Message from '../components/Message';
 import './PokemonList.css';
 
 export const POKEMON_LIST_QUERY = gql`
@@ -19,8 +20,16 @@ export const POKEMON_LIST_QUERY = gql`
 const PokemonList = () => {
   const { loading, error, data } = useQuery(POKEMON_LIST_QUERY);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error</p>;
+  if (error) {
+    return (
+      <Message>Error</Message>
+    );
+  }
+  if (loading) {
+    return (
+      <Message>Loading...</Message>
+    );
+  }
 
   const listItems = data.pokemons.map(pokemon => (
     <li key={pokemon.id} className="PokemonList-item">

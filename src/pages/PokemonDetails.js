@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import { Link } from '@reach/router';
 import Container from '../components/Container';
+import Message from '../components/Message';
 import './PokemonDetails.css';
 
 export const POKEMON_DETAILS_QUERY = gql`
@@ -24,15 +25,23 @@ const PokemonDetails = ({ id }) => {
     variables: { id },
   });
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error</p>;
+  if (error) {
+    return (
+      <Message>Error</Message>
+    );
+  }
+  if (loading) {
+    return (
+      <Message>Loading...</Message>
+    );
+  }
 
   const {
     pokemon: { image, number, name, types, resistant, weaknesses },
   } = data;
 
   return (
-    <Container className="PokemonDetails-container" centered>
+    <Container centered>
       <div className="PokemonDetails">
         <div className="PokemonDetails-image">
           <img src={image} alt={name} />
@@ -49,7 +58,9 @@ const PokemonDetails = ({ id }) => {
               <td>
                 <ul className="PokemonDetails-list">
                   {types.map(type => (
-                    <li className="PokemonDetails-tag" key={type}>{type}</li>
+                    <li className="PokemonDetails-tag" key={type}>
+                      {type}
+                    </li>
                   ))}
                 </ul>
               </td>
@@ -59,7 +70,9 @@ const PokemonDetails = ({ id }) => {
               <td>
                 <ul className="PokemonDetails-list">
                   {resistant.map(resistance => (
-                    <li className="PokemonDetails-tag" key={resistance}>{resistance}</li>
+                    <li className="PokemonDetails-tag" key={resistance}>
+                      {resistance}
+                    </li>
                   ))}
                 </ul>
               </td>
@@ -69,14 +82,18 @@ const PokemonDetails = ({ id }) => {
               <td>
                 <ul className="PokemonDetails-list">
                   {weaknesses.map(weakness => (
-                    <li className="PokemonDetails-tag" key={weakness}>{weakness}</li>
+                    <li className="PokemonDetails-tag" key={weakness}>
+                      {weakness}
+                    </li>
                   ))}
                 </ul>
               </td>
             </tr>
           </tbody>
         </table>
-        <Link to="/" className="PokemonDetails-back-link">Back to all Pokemon</Link>
+        <Link to="/" className="PokemonDetails-back-link">
+          Back to all Pokemon
+        </Link>
       </div>
     </Container>
   );

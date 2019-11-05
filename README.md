@@ -20,4 +20,3 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] Unit tests for components
 - [x] Styling
 - [ ] ~~Routing tests~~ - this would require mounting the full app with enzyme in order to test routing, which doesn't currently seem to work
-- [ ] Error/loading tests, better looking components?
