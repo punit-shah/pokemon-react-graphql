@@ -1,5 +1,5 @@
 import React from 'react';
-import { mountWithProvider, updateWrapper } from './testUtils';
+import { mountWithProvider, updateWrapper } from '../testUtils';
 import PokemonDetails, { POKEMON_DETAILS_QUERY } from './PokemonDetails';
 
 const mockId = 'pikachu';

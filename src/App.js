@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router } from '@reach/router';
-import PokemonList from './PokemonList';
-import PokemonDetails from './PokemonDetails';
+import PokemonList from './components/PokemonList';
+import PokemonDetails from './components/PokemonDetails';
 import './App.css';
 
 function App() {

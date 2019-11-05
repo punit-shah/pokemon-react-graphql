@@ -1,5 +1,5 @@
 import React from 'react';
-import { mountWithProvider, updateWrapper } from './testUtils';
+import { mountWithProvider, updateWrapper } from '../testUtils';
 import PokemonList, { POKEMON_LIST_QUERY } from './PokemonList';
 
 const graphqlMocks = [
