@@ -14,6 +14,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Todo
 
-- routing tests
-- header component
-- error/loading tests, components
+- [x] Build components for each page
+- [x] GraphQL queries with Apollo
+- [x] Routing with ~~React Router~~ Reach Router
+- [x] Unit tests for components
+- [x] Styling
+- [ ] ~~Routing tests~~ - this would require mounting the full app with enzyme in order to test routing, which doesn't currently seem to work
+- [ ] Header component
+- [ ] Error/loading tests, better looking components?
