@@ -1,8 +1,9 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
-import { Link } from '@reach/router';
 import PokemonCard from '../components/PokemonCard';
+import Container from '../components/Container';
+import './PokemonList.css';
 
 export const POKEMON_LIST_QUERY = gql`
   {
@@ -23,15 +24,15 @@ const PokemonList = () => {
 
   const listItems = data.pokemons.map(pokemon => (
     <li key={pokemon.id} className="PokemonList-item">
-      <Link to={`/${pokemon.id}`} className="PokemonList-link">
-        <PokemonCard {...pokemon} />
-      </Link>
+      <PokemonCard {...pokemon} />
     </li>
   ));
 
   return (
     <div className="PokemonList">
-      <ul>{listItems}</ul>
+      <Container>
+        <ul>{listItems}</ul>
+      </Container>
     </div>
   );
 };

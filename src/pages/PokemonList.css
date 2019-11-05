@@ -1,0 +1,53 @@
+.PokemonList {
+  background-color: #f5d2d3;
+}
+
+.PokemonList ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.PokemonList-item {
+  margin: 1rem auto 0;
+  max-width: 100%;
+}
+
+@media (min-width: 800px) {
+  .PokemonList ul {
+    flex-flow: row wrap;
+    margin: 0.75rem 0;
+  }
+
+  .PokemonList-item {
+    width: 46%;
+    flex: 1 1 40%;
+    margin: 0.75rem;
+  }
+
+  .PokemonList-item:nth-child(odd) {
+    margin-left: 0;
+  }
+
+  .PokemonList-item:nth-child(even) {
+    margin-right: 0;
+  }
+
+  .PokemonList-item:last-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .PokemonList-item {
+    width: 30%;
+    flex: 1 1 30%;
+  }
+
+  .PokemonList-item:nth-child(n) {
+    margin: 0.75rem;
+  }
+}

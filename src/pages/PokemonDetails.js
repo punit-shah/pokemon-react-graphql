@@ -75,7 +75,7 @@ const PokemonDetails = ({ id }) => {
 };
 
 PokemonDetails.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
 };
 
 export default PokemonDetails;
