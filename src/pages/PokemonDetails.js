@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 
@@ -23,7 +24,9 @@ const PokemonDetails = ({ id }) => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error</p>;
 
-  const { pokemon: { image, number, name, types, resistant, weaknesses } } = data;
+  const {
+    pokemon: { image, number, name, types, resistant, weaknesses },
+  } = data;
 
   return (
     <div className="PokemonDetails">
@@ -39,7 +42,9 @@ const PokemonDetails = ({ id }) => {
             <th scope="row">Types</th>
             <td>
               <ul>
-                {types.map(type => <li key={type}>{type}</li>)}
+                {types.map(type => (
+                  <li key={type}>{type}</li>
+                ))}
               </ul>
             </td>
           </tr>
@@ -47,7 +52,9 @@ const PokemonDetails = ({ id }) => {
             <th scope="row">Resistant to:</th>
             <td>
               <ul>
-                {resistant.map(resistance => <li key={resistance}>{resistance}</li>)}
+                {resistant.map(resistance => (
+                  <li key={resistance}>{resistance}</li>
+                ))}
               </ul>
             </td>
           </tr>
@@ -55,7 +62,9 @@ const PokemonDetails = ({ id }) => {
             <th scope="row">Weak to:</th>
             <td>
               <ul>
-                {weaknesses.map(weakness => <li key={weakness}>{weakness}</li>)}
+                {weaknesses.map(weakness => (
+                  <li key={weakness}>{weakness}</li>
+                ))}
               </ul>
             </td>
           </tr>
@@ -63,6 +72,10 @@ const PokemonDetails = ({ id }) => {
       </table>
     </div>
   );
+};
+
+PokemonDetails.propTypes = {
+  id: PropTypes.string.isRequired,
 };
 
 export default PokemonDetails;

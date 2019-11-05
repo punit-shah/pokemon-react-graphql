@@ -29,7 +29,11 @@ const PokemonList = () => {
     </li>
   ));
 
-  return <ul>{listItems}</ul>
-}
+  return (
+    <div className="PokemonList">
+      <ul>{listItems}</ul>
+    </div>
+  );
+};
 
 export default PokemonList;
