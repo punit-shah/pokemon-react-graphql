@@ -9,7 +9,9 @@ const name = 'Pikachu';
 let wrapper;
 
 beforeAll(() => {
-  wrapper = mount(<PokemonCard image={image} number={number} name={name} />);
+  wrapper = mount(
+    <PokemonCard id="pikachu" image={image} number={number} name={name} />
+  );
 });
 
 it('should display an image of the Pokemon', () => {
