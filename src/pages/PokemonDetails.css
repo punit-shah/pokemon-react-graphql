@@ -28,7 +28,8 @@
   border-collapse: collapse;
 }
 
-.PokemonDetails-table th, .PokemonDetails td {
+.PokemonDetails-table th,
+.PokemonDetails td {
   border: solid 1px #bbb;
   padding: 0.5rem;
 }
@@ -51,4 +52,29 @@
   background-color: #ddd;
   border-radius: 1em;
   margin: 0.25rem;
+}
+
+.PokemonDetails-back-link {
+  display: block;
+  margin: 2rem 0 0;
+  padding: 0.75rem 1rem;
+  border: 2px solid #bbb;
+  font-size: 1em;
+  line-height: 1.25;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  color: inherit;
+  background-color: #fff;
+  text-decoration: none;
+  transition: background-color 0.1s ease-in, border-color 0.1s ease-in;
+}
+
+.PokemonDetails-back-link:hover,
+.PokemonDetails-back-link:active,
+.PokemonDetails-back-link:focus {
+  color: #333;
+  background-color: #ddd;
+  border-color: #999;
 }

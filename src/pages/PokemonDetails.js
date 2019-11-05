@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
+import { Link } from '@reach/router';
 import Container from '../components/Container';
 import './PokemonDetails.css';
 
@@ -75,6 +76,7 @@ const PokemonDetails = ({ id }) => {
             </tr>
           </tbody>
         </table>
+        <Link to="/" className="PokemonDetails-back-link">Back to all Pokemon</Link>
       </div>
     </Container>
   );
