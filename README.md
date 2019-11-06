@@ -19,4 +19,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] Routing with ~~React Router~~ Reach Router
 - [x] Unit tests for components
 - [x] Styling
-- [ ] ~~Routing tests~~ - this would require mounting the full app with enzyme in order to test routing, which doesn't currently seem to work
+- [ ] ~~Routing tests~~ - would require an end-to-end testing setup
